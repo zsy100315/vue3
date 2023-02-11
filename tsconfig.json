@@ -1,0 +1,39 @@
+{
+	"baseUrl": "./",
+	"compilerOptions": {
+		"target": "ESNext",
+		"useDefineForClassFields": true,
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"strict": true,
+		"jsx": "preserve",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"esModuleInterop": true,
+		"lib": ["ESNext", "DOM"],
+		"skipLibCheck": true,
+		"noEmit": true,
+		"types": ["webpack-env", "node"],
+		"paths": {
+			"@/*": ["./src/*"],
+			"api/*": ["./src/api/*"],
+			"comp/*": ["./src/components/*"],
+			"utils/*": ["./src/utils/*"],
+			"types/*": ["./src/types/*"],
+			"styles/*": ["./src/styles/*"],
+			"view/*": ["./src/views/*"],
+			"store/*": ["./src/store/*"],
+			"hooks/*": ["./src/hooks/*"]
+		}
+	},
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.d.ts",
+		"src/**/*.tsx",
+		"src/**/*.vue",
+		"auto-imports.d.ts",
+		"components.d.ts"
+	],
+	"exclude": ["node_modules", "dist"],
+	"references": [{ "path": "./tsconfig.node.json" }]
+}
